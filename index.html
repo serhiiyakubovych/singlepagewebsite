@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Single Page Website</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/main.js" async></script>
+</head>
+<body>
+    <section class="banner">
+        <div class="logo-block">
+            <img src="./images/logo.png" alt="Wg.">
+        </div>
+        <div class="page-title">
+            <h1>Be sure you put your feet</h1>
+            <h1>in the right place</h1>
+        </div>
+        <div class="call-to">
+            <form method="GET" action="#">
+                <input type="text" placeholder="Enter your zip code" class="call-to__zip-code">
+                <div class="call-to__description">
+                    <img src="./images/call-to-bg.png" alt="Lorem" class="call-to__description__photo">
+                    <p class="call-to__description__text">This is Photoshop's version of Lorem ipsum.</p>
+                </div>
+                <input type="submit" class="call-to__submit" value="Press me">
+            </form>
+        </div>
+    </section>
+    <section class="boxes">
+        <div class="documents">
+            <div class="box-icon"></div>
+            <div class="box-description">
+                <p class="box-title">Documents</p>
+                <p class="box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem explicabo natus reiciendis?</p>
+            </div>
+        </div>
+        <div class="photos">
+            <div class="box-icon"></div>
+            <div class="box-description">
+                <p class="box-title">Photos</p>
+                <p class="box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At exercitationem facilis quia?</p>
+            </div>
+        </div>
+    </section>
+    <section class="main-content">
+        <div class="mobile">
+            <div class="mobile__icon">
+                <div class="mobile__icon__image"></div>
+                <div class="mobile__icon__shadow"></div>
+            </div>
+            <div class="content">
+                <div class="content__head">This is a heading</div>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ea eos, ex provident
+                    sapiente sit sunt voluptatibus. Dolor, dolorum rerum?</p>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa, deleniti excepturi impedit magnam nam
+                    natus nesciunt quos suscipit ut. Ad atque blanditiis commodi debitis delectus ducimus earum, expedita fugiat
+                    harum incidunt itaque, libero modi necessitatibus nisi quos. Animi aut debitis dolor, impedit itaque
+                    laboriosam maxime odio porro quae repellat.</p>
+            </div>
+        </div>
+        <div class="desctop">
+            <div class="desctop__icon">
+                <div class="desctop__icon__image"></div>
+                <div class="desctop__icon__shadow"></div>
+            </div>
+            <div class="content">
+                <div class="content__head">This is a heading</div>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa, deleniti excepturi impedit magnam nam
+                    natus nesciunt quos suscipit ut. Ad atque blanditiis commodi debitis delectus ducimus earum, expedita fugiat
+                    harum incidunt itaque, libero modi necessitatibus nisi quos. Animi aut debitis dolor, impedit itaque
+                    laboriosam maxime odio porro quae repellat.</p>
+                <button class="download-button">Download</button>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div id="map" class="map"></div>
+        <div class="message">
+            <form method="POST" action="#">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email address">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <div class="copyright">&copy; Copyright 2013 Css Author, All Rights Reserved.</div>
+    </footer>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTmMtn8L2UFW59irzZMltAcw1w6FU_ZSg&callback=initMap">
+    </script>
+</body>
+</html>
