@@ -62,7 +62,7 @@ html, body {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 55%);
     padding: 25px 0;
     border: 1px solid #666;
     background: #fff;
@@ -102,7 +102,7 @@ html, body {
 
 /* BOXES SECTION */
 .boxes {
-    padding: 180px 20px 110px;
+    padding: 190px 20px 110px;
     width: 100%;
     text-align: center;
 }
