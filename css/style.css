@@ -11,6 +11,10 @@ html, body {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+::selection {
+    background: orangered;
+    color: #fff;
+}
 
 /* BANNER SECTION */
 .banner {
@@ -58,7 +62,7 @@ html, body {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 45%);
+    transform: translate(-50%, 50%);
     padding: 25px 0;
     border: 1px solid #666;
     background: #fff;
@@ -72,6 +76,7 @@ html, body {
 }
 .banner .call-to__description__photo {
     margin: 20px 0;
+    width: 100%;
 }
 .banner .call-to__description__text {
     margin-top: 0;
@@ -97,7 +102,7 @@ html, body {
 
 /* BOXES SECTION */
 .boxes {
-    padding: 180px 0 110px;
+    padding: 180px 20px 110px;
     width: 100%;
     text-align: center;
 }
@@ -145,10 +150,9 @@ html, body {
 .main-content {
     padding-top: 90px;
     padding-bottom: 115px;
-    background: #5fc18b url("../images/content-bg.png") no-repeat;
-    -webkit-background-size: 1250px 1350px;
+    background: #5fc18b url("../images/content-bg.png") no-repeat center center;
+    -webkit-background-size: 1400px 1490px;
     background-size: 1400px 1490px;
-    background-position: center center;
     text-align: center;
     color: #fff;
     overflow: hidden;
@@ -203,8 +207,9 @@ html, body {
     margin: 45px auto;
     max-width: 650px;
 }
+.main-content .mobile,
 .main-content .desctop {
-    padding: 0 210px;
+    padding: 0 15%;
 }
 .main-content .desctop .desctop__icon {
     display: inline-block;
@@ -260,20 +265,154 @@ html, body {
 
 /* CONTACT SECTION */
 .contact {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+}
+.contact .map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.contact .message-box {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 430px;
+    max-width: 100%;
+    height: 430px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 5px #bbb;
+}
+.contact .message-box .message-box__form {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+}
+.contact .message-box .message-box__form input:not([type="submit"]),
+.contact .message-box .message-box__form textarea {
+    margin-bottom: 13px;
+    padding: 6px 12px;
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    color: #b4b5b9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9em;
+}
+.contact .message-box .message-box__form textarea {
+    resize: none;
+}
+.contact .message-box .message-box__form .message-box__form__submit {
+    display: block;
+    margin: 5px auto;
+    width: 70px;
+    height: 70px;
+    border: none;
+    background: url("../images/ok-icon.png") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.contact .message-box .message-box__form .message-box__form__submit:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
 }
 
 /* FOOTER */
 .page-footer {
-    padding: 16px;
+    position: relative;
+    padding: 17px;
     background: #43a06d;
     text-align: center;
     color: #fff;
 }
-#map {
-    height: 400px;
-    width: 100%;
-}
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1025px) {
+    .main-content .desctop .desctop__icon {
+        margin-right: 0;
+    }
+    .main-content .desctop .content .content__head {
+        margin-top: 35px;
+        text-align: center;
+    }
+    .main-content .desctop .content .download-button {
+        display: block;
+        margin: 40px auto 0;
+    }
+}
+@media screen and (max-width: 770px) {
+    .boxes .documents {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .main-content {
+        padding-top: 115px;
+        background: linear-gradient(-15deg, #44a36f 49.9%, #5fc18b 50%);
+        text-align: center;
+    }
+    .main-content .mobile {
+        margin-bottom: 300px;
+    }
+    .main-content .desctop .desctop__icon {
+        width: 200px;
+        height: 167px;
+    }
+    .main-content .desctop .desctop__icon .desctop__icon__shadow {
+        width: 460px;
+        height: 430px;
+    }
+}
+@media screen and (max-width: 615px) {
+    .banner {
+        height: auto;
+    }
+    .banner .call-to {
+        position: static;
+        transform: translate(0, 0);
+        width: 100%;
+        border: 0;
+        -webkit-box-shadow: 0 10px 20px #ccc;
+        -moz-box-shadow: 0 10px 20px #ccc;
+        box-shadow: 0 10px 20px #ccc;
+    }
+    .boxes {
+        padding: 50px 20px;
+    }
+}
+@media screen and (max-width: 415px) {
+    .contact .message-box {
+        top: 45px;
+        max-height: 400px;
+        border-radius: 0;
+        transition: height .5s;
+    }
+    .contact .message-box.hide-form {
+        height: 60px;
+    }
+    .contact .message-box.hide-form *:not(.hide-form-button) {
+        display: none;
+    }
+    .contact .message-box .hide-form-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        background: url("../images/hide-message-form-icon.png") no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        transition: all .5s;
+    }
+    .contact .message-box.hide-form .hide-form-button {
+        transform: rotateX(180deg);
+    }
+}

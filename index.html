@@ -6,9 +6,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Single Page Website</title>
-    <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="./js/main.js" async></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <section class="banner">
@@ -21,7 +20,7 @@
         </div>
         <div class="call-to">
             <form method="GET" action="#">
-                <input type="text" placeholder="Enter your zip code" class="call-to__zip-code">
+                <input type="text" name="sip-code" placeholder="Enter your zip code" class="call-to__zip-code">
                 <div class="call-to__description">
                     <img src="./images/call-to-bg.png" alt="Lorem" class="call-to__description__photo">
                     <p class="call-to__description__text">This is Photoshop's version of Lorem ipsum.</p>
@@ -79,21 +78,22 @@
     </section>
     <section class="contact">
         <div id="map" class="map"></div>
-        <div class="message">
-            <form method="POST" action="#">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email address">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                <input type="submit">
+        <div class="message-box">
+            <div class="hide-form-button"></div>
+            <form method="POST" action="#" class="message-box__form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email address" required>
+                <textarea name="user-message" rows="5" placeholder="Message"></textarea>
+                <button type="submit" class="message-box__form__submit"></button>
             </form>
         </div>
     </section>
     <footer class="page-footer">
-        <div class="copyright">&copy; Copyright 2013 Css Author, All Rights Reserved.</div>
+        <div class="copyright">&copy; Copyright 2017 Css Author, All Rights Reserved.</div>
     </footer>
 
     <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTmMtn8L2UFW59irzZMltAcw1w6FU_ZSg&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTmMtn8L2UFW59irzZMltAcw1w6FU_ZSg&callback=RapidSinglePage.initMap">
     </script>
 </body>
 </html>
